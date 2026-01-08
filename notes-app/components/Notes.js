@@ -1,7 +1,6 @@
 'use client';
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Error from "next/error";
 
 export default function Notes() {
     const [notes, setNotes] = useState([]);

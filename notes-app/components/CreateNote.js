@@ -1,14 +1,14 @@
 'use client'
 import { useState } from "react";
 import Error from "next/error";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 export default function CreateNote() {
-    const router= useRouter();
+    
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
     const [error, setError] = useState('');
-    
+    const router= useRouter();
 
     const handleSubmit = async (e) => {
         e.preventDefault()
