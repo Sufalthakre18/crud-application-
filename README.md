@@ -1,7 +1,29 @@
-# Notes Application
+# Notes App
+
+A **full-stack Notes CRUD application** built using **Next.js (App Router)**, **MongoDB**, and **Tailwind CSS**.
+This project was created as part of an **internship assignment** to demonstrate full-stack development skills.
+
+## Features
+
+* Create a new note
+* View all notes
+* View a single note
+* Edit existing notes
+* Delete notes
+* Each note includes a title, content, and creation timestamp
 
 ## Tech Stack
 
-- Frontend & Backend: Next.js 14 (App Router)
-- Database: MongoDB Atlas
-- Styling: Tailwind CSS
+* **Frontend:** Next.js, React
+* **Backend:** Next.js API Routes (Route Handlers)
+* **Database:** MongoDB with Mongoose
+* **Styling:** Tailwind CSS
+
+
+## Author
+
+Sufal Thakre
+
+---
+
+This project demonstrates clean code structure, RESTful APIs, and a simple, professional UI using modern Next.js practices.
