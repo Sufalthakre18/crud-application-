@@ -51,10 +51,13 @@ export default function Notes() {
                                     <p className="text-gray-600">{note.content.substring(0, 100)}.....</p>
                                     <p className="text-sm text-gray-500">Created: {new Date(note.createdAt).toLocaleString()}</p>
                                     <div className="mt-2">
-                                        <Link href={`/edit/${note._id}`} className="text-blue-500 hover:underline mr-4">
+                                        <Link href={`/view/${note._id}`} className="inline-flex items-center px-3 py-1.5 text-sm font-medium text-gray-700 border border-gray-300 rounded-md hover:bg-gray-100 transition-colors duration-200">
+                                            View
+                                        </Link>
+                                        <Link href={`/edit/${note._id}`} className="p-2 text-blue-600 hover:bg-blue-50 rounded-lg transition-all">
                                             Edit
                                         </Link>
-                                        <button onClick={() => deleteNote(note._id)} className="text-red-500 hover:underline">
+                                        <button onClick={() => deleteNote(note._id)} className="p-2 text-red-600 hover:bg-red-50 rounded-lg transition-all">
                                             Delete
                                         </button>
                                     </div>

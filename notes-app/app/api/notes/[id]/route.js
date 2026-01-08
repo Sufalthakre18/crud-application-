@@ -2,6 +2,7 @@ import dbConnect from "@/lib/mongodb";
 import Note from "@/models/Note";
 
 export async function GET(request, context) {
+
     const { id } = await context.params;
     try {
         await dbConnect()
