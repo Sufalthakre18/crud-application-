@@ -46,7 +46,7 @@ export default function Notes() {
                     (
                         <ul className="space-y-3">
                             {notes.map((note) => (
-                                <li key={note.id} className="p-4 border rounded-lg bg-gray-50">
+                                <li key={note._id} className="p-4 border rounded-lg bg-gray-50">
                                     <h2 className="text-xl font-semibold">{note.title}</h2>
                                     <p className="text-gray-600">{note.content.substring(0, 100)}.....</p>
                                     <p className="text-sm text-gray-500">Created: {new Date(note.createdAt).toLocaleString()}</p>

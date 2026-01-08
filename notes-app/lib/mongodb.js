@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import Error from "next/error";
 
 const MONGODB_URI=process.env.MONGODB_URI
 if(!MONGODB_URI){

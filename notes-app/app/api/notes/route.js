@@ -1,6 +1,7 @@
+export const runtime = "nodejs";
+
 import dbConnect from "@/lib/mongodb";
 import Note from "@/models/Note";
-import mongoose from "mongoose";
 
 export async function GET() {
     try {
