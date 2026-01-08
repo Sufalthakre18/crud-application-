@@ -3,6 +3,8 @@
 A **full-stack Notes CRUD application** built using **Next.js (App Router)**, **MongoDB**, and **Tailwind CSS**.
 This project was created as part of an **internship assignment** to demonstrate full-stack development skills.
 
+[Live link](https://crud-application-three-ashen.vercel.app/)
+
 ## Features
 
 * Create a new note
