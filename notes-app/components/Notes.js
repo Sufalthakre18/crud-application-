@@ -18,33 +18,70 @@ export default function Notes() {
     };
 
     return (
-        <div className="min-h-screen bg-gray-100 py-10">
-            <div className="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-md">
-                <h1 className="text-3xl font-bold mb-6 text-center">My Notes</h1>
+        <div className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 p-4 sm:p-8">
+            <div className="max-w-5xl mx-auto">
 
-                <Link href="/create" className="bg-blue-500 text-white px-4 py-2 rounded">
-                    Create Note
-                </Link>
+                {/* Header */}
+                <div className="flex flex-col sm:flex-row justify-between items-center mb-6 gap-4">
+                    <h1 className="text-3xl font-bold text-gray-800">📝 My Notes</h1>
 
+                    <Link
+                        href="/create"
+                        className="bg-blue-600 text-white px-5 py-2 rounded-lg shadow hover:bg-blue-700 transition"
+                    >
+                        + Create Note
+                    </Link>
+                </div>
+
+                {/* Empty State */}
                 {notes.length === 0 ? (
-                    <p>No notes</p>
+                    <div className="text-center py-20 text-gray-500">
+                        <p className="text-xl">No notes yet 😔</p>
+                        <p>Create your first note!</p>
+                    </div>
                 ) : (
-                    <ul className="mt-4 space-y-3">
+                    <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                         {notes.map(note => (
-                            <li key={note._id} className="p-4 border rounded">
-                                <h2>{note.title}</h2>
-                                <p>{note.content}</p>
-
-                                <div className="mt-2 flex gap-2">
-                                    <Link href={`/view/${note._id}`}>View</Link>
-                                    <Link href={`/edit/${note._id}`}>Edit</Link>
-                                    <button onClick={() => deleteNote(note._id)}>
-                                        Delete
-                                    </button>
+                            <div
+                                key={note._id}
+                                className="bg-white p-5 rounded-xl shadow hover:shadow-lg transition flex flex-col justify-between"
+                            >
+                                <div>
+                                    <h2 className="text-lg font-semibold text-gray-800 mb-2">
+                                        {note.title}
+                                    </h2>
+                                    <p className="text-gray-600 text-sm line-clamp-3">
+                                        {note.content}
+                                    </p>
                                 </div>
-                            </li>
+
+                                <div className="mt-4 flex justify-between items-center">
+                                    <Link
+                                        href={`/view/${note._id}`}
+                                        className="text-sm text-blue-600 hover:underline"
+                                    >
+                                        View
+                                    </Link>
+
+                                    <div className="flex gap-2">
+                                        <Link
+                                            href={`/edit/${note._id}`}
+                                            className="text-yellow-600 hover:bg-yellow-100 px-2 py-1 rounded"
+                                        >
+                                            Edit
+                                        </Link>
+
+                                        <button
+                                            onClick={() => deleteNote(note._id)}
+                                            className="text-red-600 hover:bg-red-100 px-2 py-1 rounded"
+                                        >
+                                            Delete
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         ))}
-                    </ul>
+                    </div>
                 )}
             </div>
         </div>
